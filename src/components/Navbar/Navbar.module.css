@@ -1,0 +1,45 @@
+.navbarContainer {
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(
+    to right,
+    #00d2ff 0%,
+    #3a7dd5 51%,
+    #00d2ff 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  top: 0;
+  color: white;
+  z-index: 99;
+  position: sticky;
+  font-weight: 500;
+}
+
+.appName span {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.appName a:hover {
+  color: white;
+}
+
+.navLinks {
+  float: right;
+}
+
+.navLinks span {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.navLinks a{
+    color: white;
+}
+
+.navLinks a:hover{
+    color: black;
+}
