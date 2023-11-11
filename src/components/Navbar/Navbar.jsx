@@ -2,9 +2,8 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { NavLink, Outlet } from "react-router-dom";
 import { useAuthValue } from "../../context/authContext";
-import { FaBuysellads, FaHome, FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import { GiShoppingCart } from "react-icons/gi";
 import { GoSignIn } from "react-icons/go";
 const Navbar = () => {
   const { signOut, isLoggedIn } = useAuthValue();
