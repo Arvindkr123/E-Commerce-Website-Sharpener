@@ -41,7 +41,7 @@ export const AuthContextProvider = ({ children }) => {
       name: data.name,
       email: data.email,
       password: data.password,
-      carts: [],
+      cart: [],
       orders: [],
     });
     toast.success("new user added successfully, Please login to continue");

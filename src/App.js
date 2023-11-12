@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, SignIn, SignUp } from "./components";
+import { Cart, Home, Navbar, SignIn, SignUp } from "./components";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const App = () => {
@@ -9,12 +9,20 @@ const App = () => {
       element: <Navbar />,
       children: [
         {
+          path: "/",
+          element: <Home />,
+        },
+        {
           path: "/signIn",
           element: <SignIn />,
         },
         {
           path: "/signUp",
           element: <SignUp />,
+        },
+        {
+          path: "/cart",
+          element: <Cart />,
         },
       ],
     },
