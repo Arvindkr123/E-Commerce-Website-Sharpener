@@ -19,11 +19,11 @@ const CartItem = ({ product }) => {
           <div className={styles.priceQuant}>RS.{price}</div>
           <div className={styles.quantity}>
             <span className={styles.minus}>
-              <AiFillMinusCircle onClick={() => decreaseQuantity(quantity)} />
+              <AiFillMinusCircle onClick={() => decreaseQuantity(product)} />
             </span>
             &nbsp;{quantity}&nbsp;
             <span className={styles.plus}>
-              <AiFillPlusCircle onClick={() => increaseQuantity(quantity)} />
+              <AiFillPlusCircle onClick={() => increaseQuantity(product)} />
             </span>
           </div>
         </div>

@@ -1,5 +1,13 @@
 import React from "react";
-import { Cart, Home, Navbar, SignIn, SignUp } from "./components";
+import {
+  Cart,
+  Error,
+  Home,
+  MyOrder,
+  Navbar,
+  SignIn,
+  SignUp,
+} from "./components";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const App = () => {
@@ -7,6 +15,7 @@ const App = () => {
     {
       path: "/",
       element: <Navbar />,
+      errorElement: <Error />,
       children: [
         {
           path: "/",
@@ -23,6 +32,10 @@ const App = () => {
         {
           path: "/cart",
           element: <Cart />,
+        },
+        {
+          path: "/myOrder",
+          element: <MyOrder />,
         },
       ],
     },
