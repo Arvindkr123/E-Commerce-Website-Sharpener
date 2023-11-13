@@ -12,7 +12,7 @@ export default function Item({ item }) {
       <div className={styles.itemInfo}>
         <div className={styles.namePrice}>
           <div className={styles.name}>{name}</div>
-          <div className={styles.price}>RS.{price}</div>
+          <div className={styles.price}>RS {price}</div>
         </div>
         <div className={styles.btnContainer}>
           <button

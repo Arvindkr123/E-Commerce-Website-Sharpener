@@ -1,0 +1,45 @@
+.filterbar {
+  margin: 15px;
+  width: 100%;
+  box-shadow: 1px 1px 8px 1px gray;
+  height: 60px;
+  font-size: 1.1rem;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #4ca6dd;
+  border-radius: 5px;
+  justify-content: space-around;
+}
+
+.filterbar h1 {
+  color: #752bc3;
+}
+
+.priceRange {
+  color: #752bc3;
+  text-align: center;
+}
+
+.priceRange input {
+  width: 100%;
+  height: 5px;
+}
+
+.categoryBox {
+  display: flex;
+}
+
+.categoryBox span {
+  color: #752bc3;
+}
+
+.categoryBox input {
+  margin-left: 15px;
+}
+.categoryBox input,
+label {
+  cursor: pointer;
+}

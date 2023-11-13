@@ -17,43 +17,38 @@ export default function Home() {
       setLoading(false);
     }, 400);
   }, []);
+
+  if (loading) return <Loader />;
+
   return (
     <>
-      {loading ? (
-        <>
-          <Loader />
-        </>
-      ) : (
-        <>
-          <div>
-            <input
-              onChange={(e) => setSearch(e.target.value)}
-              value={search}
-              type="text"
-              placeholder="Search Item..."
-            />
-            <button onClick={() => setApplyFilter(!applyFilter)}>
-              {applyFilter ? "Cancel" : "apply filter"}
-            </button>
-          </div>
-          <div className={styles.mainContainer}>
-            {applyFilter && (
-              <FilterBar
-                price={price}
-                setPrice={setPrice}
-                category={category}
-                setCategory={setCategory}
-              />
-            )}
-          </div>
-          <MainContent
-            search={search}
+      <div className={styles.header}>
+        <input
+          onChange={(e) => setSearch(e.target.value)}
+          value={search}
+          type="text"
+          placeholder="Search Item..."
+        />
+        <button onClick={() => setApplyFilter(!applyFilter)}>
+          {applyFilter ? "Cancel" : "apply filter"}
+        </button>
+      </div>
+      <div className={styles.mainContainer}>
+        {applyFilter && (
+          <FilterBar
             price={price}
+            setPrice={setPrice}
             category={category}
-            applyFilter={applyFilter}
+            setCategory={setCategory}
           />
-        </>
-      )}
+        )}
+      </div>
+      <MainContent
+        search={search}
+        price={price}
+        category={category}
+        applyFilter={applyFilter}
+      />
     </>
   );
 }

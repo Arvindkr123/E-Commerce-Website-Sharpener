@@ -6,7 +6,7 @@ const FilterBar = ({ price, setPrice, category, setCategory }) => {
       <h1>FilterBar</h1>
       <div className={styles.priceRange}>
         <span>Price</span>
-        {`<=${price}`}
+        {` <= ${price}`}
         <input
           type="range"
           min={100}
