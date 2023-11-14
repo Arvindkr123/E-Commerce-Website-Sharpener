@@ -2,7 +2,7 @@ import React from "react";
 import { useProductContext } from "../../context/productContext";
 import { useState } from "react";
 import { useAuthValue } from "../../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Loader from "../Loader/Loader";
 import styles from "./cart.module.css";
@@ -60,7 +60,31 @@ export default function Cart() {
       </div>
       <div className={styles.itemContainer}>
         {cart.length === 0 ? (
-          <h1>Nothing in your cart </h1>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <h1 style={{ textAlign: "center", fontFamily: "cursive" }}>
+              Nothing in your cart{" "}
+            </h1>
+            <p>
+              <Link
+                style={{
+                  color: "red",
+                  textTransform: "capitalize",
+                  fontSize: "25px",
+                  textDecoration:"none",
+                  fontFamily: "monospace"
+                }}
+                to="/"
+              >
+                back to Shopping...
+              </Link>
+            </p>
+          </div>
         ) : (
           <>
             {cart.map((product, i) => {

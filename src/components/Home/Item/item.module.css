@@ -33,7 +33,7 @@
 }
 
 .price {
-  color: #bbb;
+  color: blue;
   text-align: center;
   margin-top: 5px;
   cursor: pointer;
@@ -45,8 +45,9 @@
 }
 
 .addbtn {
-  background: magenta;
-  color: black;
+  background: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
+
+  color: white;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -54,5 +55,5 @@
 
 .addbtn:hover {
   background: rgb(47, 255, 116);
-  color: whitergb(255, 47, 141)
+  color: whitergb(255, 47, 141);
 }

@@ -1,0 +1,74 @@
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainContainer > div {
+  width: 100%;
+  margin: 15px;
+}
+
+.header {
+  height: 60px;
+  background-color: #b2d3df70;
+  box-shadow: 1px 1px 8px 1px gray;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  color: #57577a;
+}
+
+.userInfo {
+  text-transform: capitalize;
+}
+
+.userInfo small {
+  font-size: 25px;
+  text-transform: lowercase;
+}
+
+.cartDetails {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cartDetails > div {
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.removeAll,
+.purchaseAll {
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+
+.removeAll {
+  background-color: red;
+}
+.removeAll:hover {
+  background-color: rgb(193, 39, 39);
+}
+
+.purchaseAll {
+  background-color: blueviolet;
+}
+.purchaseAll:hover {
+  background-color: rgb(47, 10, 82);
+}
+
+.itemContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

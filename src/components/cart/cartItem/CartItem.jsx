@@ -8,29 +8,39 @@ const CartItem = ({ product }) => {
     useProductContext();
   return (
     <>
-      <div className={styles.cartContainer}>
-        <div className={styles.imageContainer}>
+      <div className={styles.cardContainer}>
+        <div className={styles.imgContainer}>
           <img src={image} alt={category} />
         </div>
         <div className={styles.itemInfo}>
           <div className={styles.namePrice}>
-            <div className={styles.name}>{name}</div>
+            <div className={styles.name}>{name.substring(0, 20)}...</div>
           </div>
-          <div className={styles.priceQuant}>RS.{price}</div>
-          <div className={styles.quantity}>
-            <span className={styles.minus}>
-              <AiFillMinusCircle onClick={() => decreaseQuantity(product)} />
-            </span>
-            &nbsp;{quantity}&nbsp;
-            <span className={styles.plus}>
-              <AiFillPlusCircle onClick={() => increaseQuantity(product)} />
-            </span>
+          <div className={styles.price}>RS {price}</div>
+          <div className={styles.allbtn}>
+            <div className={styles.quantity}>
+              <span className={styles.minus}>
+                <AiFillMinusCircle
+                  color="blue"
+                  onClick={() => decreaseQuantity(product)}
+                />
+              </span>
+              &nbsp;{quantity}&nbsp;
+              <span className={styles.plus}>
+                <AiFillPlusCircle
+                  color="blue"
+                  onClick={() => increaseQuantity(product)}
+                />
+              </span>
+            </div>
+
+            <button
+              className={styles.btnContainer}
+              onClick={() => removefromCart(product)}
+            >
+              Remove from cart
+            </button>
           </div>
-        </div>
-        <div className={styles.btnContainer}>
-          <button onClick={() => removefromCart(product)}>
-            Remove from cart
-          </button>
         </div>
       </div>
     </>
