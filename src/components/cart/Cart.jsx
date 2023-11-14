@@ -50,7 +50,7 @@ export default function Cart() {
             </button>
           </div>
           <div>
-            Total Amount : RS {total}
+            Total Amount : RS {Math.round(total)}
             <br />
             <button onClick={handlePurchase} className={styles.purchaseAll}>
               Purchase All
@@ -76,8 +76,8 @@ export default function Cart() {
                   color: "red",
                   textTransform: "capitalize",
                   fontSize: "25px",
-                  textDecoration:"none",
-                  fontFamily: "monospace"
+                  textDecoration: "none",
+                  fontFamily: "monospace",
                 }}
                 to="/"
               >
