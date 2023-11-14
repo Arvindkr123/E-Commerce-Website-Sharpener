@@ -1,0 +1,31 @@
+.mainContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#orderHeading {
+  color: red;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.grandTotal{
+  color: white;
+  background-color: red;
+}
