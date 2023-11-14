@@ -43,7 +43,8 @@ export const ProductContextProvider = ({ children }) => {
         setCart(doc.data().cart);
         setMyOrders(doc.data().orders);
       });
-      let sum = cart.reduce((acc, curr) => acc + Number(curr.price), 0);
+      let sum = 0;
+      cart.map((item) => Number((sum += item.price)));
       setTotal(sum);
       setItemInCart(cart.length);
     }
